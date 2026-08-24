@@ -2,16 +2,8 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import basicSSL from '@vitejs/plugin-basic-ssl';
-//import injectHTML from 'vite-plugin-html-inject';
-import { defineConfig, fontProviders } from 'astro/config';
 import { readFileSync } from 'node:fs';
-
-const SSLoptions = {
-  key: readFileSync('/dev/cert/private-key.pem'),
-  cert: readFileSync('/dev/cert/certificate.pem'),
-};
-
+import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,41 +18,15 @@ export default defineConfig({
 
 	vite: {
 		server: {
-			//https: SSLoptions,
-			// {
-			// 	key: '/dev/cert/private-key.pem',
-			// 	cert: '/dev/cert/certificate.pem',
-			// },
+			https: { //Certs made by https://github.com/FiloSottile/mkcert
+				key: readFileSync('/dev/cert/key.pem'),
+				cert: readFileSync('/dev/cert/cert.pem'),
+			},
 			port: 443,
 			host: 'wi.benmirkhah.com',
 			origin: 'https://wi.benmirkhah.com',
 		},
-
-		plugins: [
-			basicSSL({
-				name: 'wildcard',
-				domains: ['*.benmirkhah.com'],
-				ttlDays: 30,
-				certDir: '/dev/cert',
-			}),
-		],
-
 	},
-
-  security: {
-    allowedDomains: [
-      {
-        hostname: '*.benmirkhah.com',
-        protocol: 'https',
-				port: '443'
-      },
-      {
-        hostname: 'wi.benmirkhah.com',
-        protocol: 'https',
-        port: '443'
-      }
-    ]
-  },
 
 	integrations: [mdx(), sitemap()],
 
