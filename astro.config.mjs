@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { defineConfig, fontProviders } from 'astro/config';
 
 export default defineConfig({
-	site: 'https://wi.benmirkhah.com',
+	site: 'https://whois.benmirkhah.com',
 	output: 'static',
 	server: { 
 		host: 'wi.benmirkhah.com',
