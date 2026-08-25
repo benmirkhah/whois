@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 import { readFileSync } from 'node:fs';
 import { defineConfig, fontProviders } from 'astro/config';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://wi.benmirkhah.com',
 	output: 'static',

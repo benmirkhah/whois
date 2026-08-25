@@ -1,10 +1,20 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 :root {
+	--cxr:hsl(000,75%,80%); --clr:hsl(000,75%,60%); --cmr:hsl(000,75%,40%); --cdr:hsl(000,75%,20%);
+  --cxo:hsl(030,75%,80%); --clo:hsl(030,75%,60%); --cmo:hsl(030,75%,40%); --cdo:hsl(030,75%,20%);
+  --cxy:hsl(050,75%,80%); --cly:hsl(050,75%,60%); --cmy:hsl(050,75%,40%); --cdy:hsl(050,75%,20%);
+  --cxg:hsl(090,75%,80%); --clg:hsl(090,75%,60%); --cmg:hsl(090,75%,40%); --cdg:hsl(090,75%,20%);
+  --cxt:hsl(180,75%,80%); --clt:hsl(180,75%,60%); --cmt:hsl(180,75%,40%); --cdt:hsl(180,75%,20%);
+  --cxb:hsl(230,75%,80%); --clb:hsl(230,75%,60%); --cmb:hsl(230,75%,40%); --cdb:hsl(230,75%,20%);
+  --cxp:hsl(270,75%,80%); --clp:hsl(270,75%,60%); --cmp:hsl(270,75%,40%); --cdp:hsl(270,75%,20%);
+  --cxm:hsl(320,75%,80%); --clm:hsl(320,75%,60%); --cmm:hsl(320,75%,40%); --cdm:hsl(320,75%,20%);
+
+	--luid:  var(--cmp);
+	--ldev:  var(--cmb);
+	--lart:  var(--cmg);
+	--llab:  var(--cmt);
+	--letc:  var(--cmo);
+	--lblg:  var(--cmr);
+
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
@@ -16,6 +26,7 @@
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
+
 body {
 	font-family: var(--font-atkinson);
 	margin: 0;
@@ -26,9 +37,10 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	/* font-size: 20px; */
+	/* line-height: 1.7; */
 }
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
@@ -139,3 +151,17 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+#luid { color: var(--luid); }
+#ldev { color: var(--ldev); }
+#lart { color: var(--lart); }
+#llab { color: var(--llab); }
+#letc { color: var(--letc); }
+#lblg { color: var(--lblg); }
+
+#luid:hover { color:#fff; background-color: var(--luid); }
+#ldev:hover { color:#fff; background-color: var(--ldev); }
+#lart:hover { color:#fff; background-color: var(--lart); }
+#llab:hover { color:#fff; background-color: var(--llab); }
+#letc:hover { color:#fff; background-color: var(--letc); }
+#lblg:hover { color:#fff; background-color: var(--lblg); }
