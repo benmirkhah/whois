@@ -2,14 +2,13 @@
 type: 'dev'
 slug: dev/apptio
 name: 'Apptio'
-logo: 'apptio.svg'
 title: 'Apptio Marketing Website'
-company: 'Apptio, an IBM company'
+company: 'Apptio'
 url: 'https://apptio.com'
-year: '2017'
+year: 2018
 slides: '/public/slides-apptio'
 imgtype: 'r4x3'
-description: 'Site rebuild made it easier for both the internal staff and visitors.'
+description: 'Site rebuild'
 tags: 'Drupal, CMS, Marketing, Website'
 ---
 

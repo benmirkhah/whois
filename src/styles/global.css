@@ -27,6 +27,16 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 
+*, html { box-sizing:  border-box; }
+
+html,
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
 body {
 	font-family: var(--font-atkinson);
 	margin: 0;

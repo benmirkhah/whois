@@ -1,37 +1,53 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { url } from 'astro:schema';
 import { z } from 'astro/zod';
 
+//BLOGS
 const blog = defineCollection({
-	// Load Markdown and MDX files in the `src/content/blog/` directory.
 	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
 			description: z.string(),
-			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
 		}),
 });
 
+//PROJECTS
 const project = defineCollection({
 	loader: glob({ base: './src/content/project', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			type: z.string(),
-			name: z.string(),
-			logo: z.optional(image()),
+			name: z.string().min(2),
 			title: z.string(),
-			company: z.string(),
+			company: reference("company"),
 			url: z.optional(url()),
-			year: z.int(),
+			year: z.coerce.number(),
+			slide: z.optional(image()),
 			description: z.string(),
-			tags: z.array(z.string()),
+			related: reference("project").optional(),
+			tags: z.string(),
+			//tags: z.array(z.string()),
 		}),
 });
 
-export const collections = { blog, project };
+//COMPANIES
+const company = defineCollection({
+	loader: glob({ base: './src/content/company', pattern: '**/*.{md,mdx}' }),
+	schema: ({ image }) =>
+		z.object({
+			status: z.enum(["active", "inactive", "forgotten"]).default("active"),
+			name: z.string(),
+			logo: z.optional(image()),
+			url: z.optional(url()),
+			est: z.int().optional(),
+			tags: z.string(),
+			//tags: z.array(z.string()),
+		}),
+});
+
+export const collections = { blog, project, company };
