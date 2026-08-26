@@ -1,9 +1,9 @@
 ---
 type: 'dev'
-slug: dev/apptio
+slug: 'dev/apptio'
 name: 'Apptio'
 title: 'Apptio Marketing Website'
-company: 'Apptio'
+company: apptio
 url: 'https://apptio.com'
 year: 2018
 slides: '/public/slides-apptio'

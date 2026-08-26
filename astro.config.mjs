@@ -5,27 +5,44 @@ import sitemap from '@astrojs/sitemap';
 import { readFileSync } from 'node:fs';
 import { defineConfig, fontProviders } from 'astro/config';
 
+console.log('MODE:' + import.meta.env.MODE);
+
+const DEV  = (import.meta.env.MODE == 'development') ? 1 : 0;
+const key  = DEV ? '/dev/cert/key.pem'  : './key.pem';
+const cert = DEV ? '/dev/cert/cert.pem' : './cert.pem';
+const subd = DEV ? 'wi' : 'whois';
+const port = DEV ? 443 : 80;
+const host = subd+'.benmirkhah.com';
+const site = 'https://'+host;
+
+const SSLOptions = { //Certs made by https://github.com/FiloSottile/mkcert
+	key:  DEV ? readFileSync(key) : key,
+	cert: DEV ? readFileSync(cert): cert,
+}
+
+const viteDEV = {
+  mode: 'development',
+	server: {
+		https: SSLOptions,
+		port: port,
+		host: host,
+		origin: site,
+	}
+}
+
+const vitePROD   = { mode: 'production' }
+const viteOtions = DEV ? viteDEV : vitePROD;
+
 export default defineConfig({
-	site: 'https://whois.benmirkhah.com',
+	site: site,
 	output: 'static',
 	server: { 
-		host: 'wi.benmirkhah.com',
-		port: 443, 
-		allowedHosts: ['wi.benmirkhah.com', 'whois.benmirkhah.com'],
-		//open: 'https://wi.benmirkhah.com'
+		host: host,
+		port: port, 
+		allowedHosts: [ site ],
 	},
 
-	vite: {
-		server: {
-			https: { //Certs made by https://github.com/FiloSottile/mkcert
-				key: readFileSync('/dev/cert/key.pem'),
-				cert: readFileSync('/dev/cert/cert.pem'),
-			},
-			port: 443,
-			host: 'wi.benmirkhah.com',
-			origin: 'https://wi.benmirkhah.com',
-		},
-	},
+	vite: viteOtions,
 
 	integrations: [mdx(), sitemap()],
 

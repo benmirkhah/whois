@@ -16,6 +16,21 @@ const blog = defineCollection({
 		}),
 });
 
+//COMPANIES
+const company = defineCollection({
+	loader: glob({ base: './src/content/company', pattern: '**/*.{md,mdx}' }),
+	schema: ({ image }) =>
+		z.object({
+			status: z.enum(["active", "inactive", "forgotten"]).default("active"),
+			name: z.string(),
+			logo: z.optional(image()),
+			url: z.optional(url()),
+			est: z.int().optional(),
+			tags: z.string(),
+			//tags: z.array(z.string()),
+		}),
+});
+
 //PROJECTS
 const project = defineCollection({
 	loader: glob({ base: './src/content/project', pattern: '**/*.{md,mdx}' }),
@@ -35,19 +50,4 @@ const project = defineCollection({
 		}),
 });
 
-//COMPANIES
-const company = defineCollection({
-	loader: glob({ base: './src/content/company', pattern: '**/*.{md,mdx}' }),
-	schema: ({ image }) =>
-		z.object({
-			status: z.enum(["active", "inactive", "forgotten"]).default("active"),
-			name: z.string(),
-			logo: z.optional(image()),
-			url: z.optional(url()),
-			est: z.int().optional(),
-			tags: z.string(),
-			//tags: z.array(z.string()),
-		}),
-});
-
-export const collections = { blog, project, company };
+export const collections = { blog, company, project };
