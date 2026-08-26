@@ -5,6 +5,8 @@ import sitemap from '@astrojs/sitemap';
 import { readFileSync } from 'node:fs';
 import { defineConfig, fontProviders } from 'astro/config';
 
+import.meta.env.MODE = 'production';
+
 console.log('MODE:' + import.meta.env.MODE);
 
 const DEV  = (import.meta.env.MODE == 'development') ? 1 : 0;
