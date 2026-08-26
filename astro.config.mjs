@@ -1,21 +1,25 @@
 // @ts-check
-
+import { loadEnv } from "vite";
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { readFileSync } from 'node:fs';
 import { defineConfig, fontProviders } from 'astro/config';
 
-import.meta.env.MODE = 'production';
+const mode  = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+const env   = loadEnv(mode, process.cwd(), "");
+const local = (env.SERVER_MODE == 'local') ? true : false; 
 
-console.log('MODE:' + import.meta.env.MODE);
+console.log('SERVER_MODE: ' + (local ? 'local' : 'not-local'));
 
-const DEV  = (import.meta.env.MODE == 'development') ? 1 : 0;
+const DEV  = local ? true : false;
 const key  = DEV ? '/dev/cert/key.pem'  : './key.pem';
 const cert = DEV ? '/dev/cert/cert.pem' : './cert.pem';
 const subd = DEV ? 'wi' : 'whois';
 const port = DEV ? 443 : 80;
 const host = subd+'.benmirkhah.com';
 const site = 'https://'+host;
+
+const experimental = DEV ? { chromeDevtoolsWorkspace: true } : {}
 
 const SSLOptions = { //Certs made by https://github.com/FiloSottile/mkcert
 	key:  DEV ? readFileSync(key) : key,
@@ -43,6 +47,8 @@ export default defineConfig({
 		port: port, 
 		allowedHosts: [ site ],
 	},
+
+  experimental: experimental,
 
 	vite: viteOtions,
 
