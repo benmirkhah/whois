@@ -1,0 +1,17 @@
+---
+interface Props {
+	mode: string;
+  icon: string;
+  color: string;
+}
+
+const { mode, icon, color } = Astro.props;
+const modeid  = mode + '-mode';
+const checked = (color == 'd') ? 'checked' : '';
+//const chr.toUpperCase());
+---
+<input type="radio" id={modeid}
+       name="mode-selector" 
+       value={mode}   
+       onchange="console.log('Mode changed to '+value);" {checked}/>
+<label for={modeid} class={color}><i>{icon}</i><code>{mode} Mode</code></label>
