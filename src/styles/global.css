@@ -248,7 +248,6 @@ hr {
 		&.p code { color: var(--cxp); }
 		&.k code { color: #AAA; }
 
-
   } /* /label */
 
   input {

@@ -24,7 +24,7 @@ const company = defineCollection({
 			status: z.enum(["active", "inactive", "forgotten"]).default("active"),
 			name: z.string(),
 			logo: z.optional(image()),
-			url: z.optional(url()),
+			url: z.url().optional(),
 			est: z.int().optional(),
 			tags: z.string(),
 			//tags: z.array(z.string()),
