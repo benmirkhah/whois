@@ -4,7 +4,7 @@ name: 'Apptio'
 logo: '../../assets/logos/apptio.svg'
 url: 'https://apptio.com'
 est: 2007
-tags: 'SaaS, Software, Technology'
+tags: 'SaaS, Software, Technology, Seattle'
 ---
 
 Apptio is a leading provider of Technology Business Management and FinOps software 
