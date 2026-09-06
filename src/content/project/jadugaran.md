@@ -1,6 +1,5 @@
 ---
 type: 'design'
-slug: 'dev/jadugaran'
 name: 'Jadugaran'
 title: 'Jadugaran Publishing Site'
 company: jadugaran
@@ -9,16 +8,15 @@ year: 2012
 description: 'Site design and development'
 tags: 'Drupal, CMS, International'
 ratio: 'r4x3'
-slides: 3
-sprite: 'https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr1'
-caption: [
-  'English Frontpage', 
-  'Collection Page', 
-  'Song Download Page', 
-  'Artist Page', 
-  'Contact Page',
-  'Persian Frontpage (Right To Left Layout)'
-]
+sprite: 'https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd1'
+caption: {
+  'jd1': 'English Frontpage', 
+  'jd2': 'Collection Page', 
+  'jd3': 'Song Download Page', 
+  'jd4': 'Artist Page', 
+  'jd5': 'Contact Page',
+  'jd6': 'Persian Frontpage (Right To Left Layout)'
+}
 ---
 
 Jadugaran was a multilingual site for an international music publishing label.

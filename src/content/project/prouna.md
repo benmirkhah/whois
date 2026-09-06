@@ -1,6 +1,5 @@
 ---
 type: 'design'
-slug: 'dev/prouna'
 name: 'Prouna'
 title: 'Prouna Online Store'
 company: prouna
@@ -9,9 +8,12 @@ year: 2012
 description: 'Site redesign and development'
 tags: 'Ecommerce, Drupal, CMS, UberCart, DTC'
 ratio: 'r4x3'
-slides: 3
 sprite: 'https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr1'
-caption: ['Prouna Frontpage', 'Jewelry Collection Page', 'Home Decor Page']
+caption: {
+  'pr1':'Prouna Frontpage', 
+  'pr2':'Jewelry Collection Page',
+  'pr3':'Home Decor Page',
+}
 ---
 
 Prouna is a luxury brand of jewel encrusted chinaware.
