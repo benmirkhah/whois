@@ -16,7 +16,7 @@ const blog = defineCollection({
 		}),
 });
 
-//COMPANIES
+//ORGANIZATIONS
 const company = defineCollection({
 	loader: glob({ base: './src/content/company', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
@@ -42,11 +42,14 @@ const project = defineCollection({
 			company: reference("company"),
 			url: z.optional(url()),
 			year: z.coerce.number(),
-			slide: z.optional(image()),
 			description: z.string(),
 			related: reference("project").optional(),
 			tags: z.string(),
 			//tags: z.array(z.string()),
+			ratio: z.string(),
+			slides: z.coerce.number(),
+			sprite: z.optional(image()),
+			caption: z.array(z.string())
 		}),
 });
 

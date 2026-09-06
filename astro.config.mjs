@@ -48,6 +48,13 @@ export default defineConfig({
 		allowedHosts: [ site ],
 	},
 
+	image: {
+    domains: [
+			'files.benmirkhah.com', 
+			'media.benmirkhah.com'
+		],
+  },
+
   experimental: experimental,
 
 	vite: viteOtions,
