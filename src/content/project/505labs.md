@@ -8,7 +8,7 @@ year: 2012
 description: 'Site design and development'
 tags: 'Drupal, CMS'
 ratio: 'r4x3'
-sprite: 'https://files.benmirkhah.com/sprites/sprite-505labs.svg#lab1'
+sprite: 'https://files.benmirkhah.com/sprites/sprite-505labs.svg'
 caption: {
   'lab1': '505LABS Frontpage', 
   'lab2': 'Launch Planing Page', 

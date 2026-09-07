@@ -8,7 +8,7 @@ year: 2012
 description: 'Site redesign and development'
 tags: 'Ecommerce, Drupal, CMS, UberCart, DTC'
 ratio: 'r4x3'
-sprite: 'https://files.benmirkhah.com/sprites/sprite-prouna.svg#pr1'
+sprite: 'https://files.benmirkhah.com/sprites/sprite-prouna.svg'
 caption: {
   'pr1':'Prouna Frontpage', 
   'pr2':'Jewelry Collection Page',

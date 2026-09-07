@@ -7,22 +7,18 @@ const projects = (await getCollection('project'));
 //.sort( (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(), );
 ---
 <PageLayout>
-	<h1>DEVELOPER</h1>
+	<h1>Developer</h1>
 	<section>
-		<ul>
+		<ol>
 			{
 				projects.map((project) => (
 					<li>
 						<a href={`/dev/${project.id}/`}>
-							{/* {project.data.sprite && (
-								<Image width={720} height={360} src={project.data.sprite} alt="" />
-							)} */}
 							<span class="title">{project.data.title}</span>
-								{/* <FormattedDate date={project.data.pubDate} /> */}
 						</a>
 					</li>
 				))
 			}
-		</ul>
+		</ol>
 	</section>
 </PageLayout>

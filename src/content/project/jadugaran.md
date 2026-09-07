@@ -4,11 +4,11 @@ name: 'Jadugaran'
 title: 'Jadugaran Publishing Site'
 company: jadugaran
 url: 'https://web.archive.org/web/20160306063508/http://jadugaran.com/'
-year: 2012
+year: 2011
 description: 'Site design and development'
-tags: 'Drupal, CMS, International'
+tags: 'Drupal, CMS, Multilingual, Portal'
 ratio: 'r4x3'
-sprite: 'https://files.benmirkhah.com/sprites/sprite-jadu.svg#jd1'
+sprite: 'https://files.benmirkhah.com/sprites/sprite-jadu.svg'
 caption: {
   'jd1': 'English Frontpage', 
   'jd2': 'Collection Page', 
@@ -19,6 +19,8 @@ caption: {
 }
 ---
 
-Jadugaran was a multilingual site for an international music publishing label.
+Jadugaran was a multilingual site for an international music publishing collective.
 
-The site showcased music and lyrics of a number of artists and collaberators in English, German and Persian.
+The site showcased music and lyrics of a number of artists and collaberators in English, 
+German and Persian. The site also acted as a fan base allowing various interactions between 
+users and their favorite artist through coments and participation in ratings.

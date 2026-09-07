@@ -1,23 +1,40 @@
 :root {
-	--cxw:#FFF; --clw:#DDD; --cmw:#CCC; --cdw:#AAA;
-	--cxw:#555; --clw:#333; --cmk:#222; --cdk:#000;
-	--cxr:hsl(000,75%,80%); --clr:hsl(000,75%,60%); --cmr:hsl(000,75%,40%); --cdr:hsl(000,75%,20%);
-	--cxo:hsl(030,75%,80%); --clo:hsl(030,75%,60%); --cmo:hsl(030,75%,40%); --cdo:hsl(030,75%,20%);
-	--cxy:hsl(050,75%,80%); --cly:hsl(050,75%,60%); --cmy:hsl(050,75%,40%); --cdy:hsl(050,75%,20%);
-	--cxg:hsl(090,75%,80%); --clg:hsl(090,75%,60%); --cmg:hsl(090,75%,40%); --cdg:hsl(090,75%,20%);
-	--cxt:hsl(180,75%,80%); --clt:hsl(180,75%,60%); --cmt:hsl(180,75%,40%); --cdt:hsl(180,75%,20%);
-	--cxb:hsl(230,75%,80%); --clb:hsl(230,75%,60%); --cmb:hsl(230,75%,40%); --cdb:hsl(230,75%,20%);
-	--cxp:hsl(270,75%,80%); --clp:hsl(270,75%,60%); --cmp:hsl(270,75%,40%); --cdp:hsl(270,75%,20%);
-	--cxm:hsl(320,75%,80%); --clm:hsl(320,75%,60%); --cmm:hsl(320,75%,40%); --cdm:hsl(320,75%,20%);
+	--cxw:#FFF; --clw:#DDD; --cmw:#CCC; --cdw:#BBB; --cbw:#AAA;
+	--cxa:#999; --cla:#888; --cma:#777; --cda:#666; --cba:#555;
+	--cxk:#444; --clk:#333; --cmk:#222; --cdk:#111; --cbk:#000;
+	--cxr:#F99; --clr:#F00; --cmr:#900; --cdr:#600; --cbr:#522;
+	--cxo:#FB3; --clo:#F90; --cmo:#C60; --cdo:#940; --cbo:#620;
+	--cxy:#FFD; --cly:#FFA; --cmy:#EE6; --cdy:#C93; --cby:#B70;
+	--cxg:#9F9; --clg:#0F0; --cmg:#0C0; --cdg:#090; --cbg:#060;
+	--cxt:#9FF; --clt:#0FF; --cmt:#0CC; --cdt:#099; --cbt:#066;
+	--cxb:#6CF; --clb:#69F; --cmb:#36F; --cdb:#03C; --cbb:#009;
+	--cxp:#B6F; --clp:#94F; --cmp:#80E; --cdp:#60C; --cbp:#306;
+	--cxm:#F9F; --clm:#E6D; --cmm:#D0A; --cdm:#C0C; --cbm:#909;
 
-	--luid:  var(--cmp);
+	--ccx:#FFF; --ccl:#FC9; --ccm:#C0C; --ccd:#609; --ccb:#036; /* Current Colors */
+
+	--ctext:   var(--clk);
+	--cbold:   var(--cdk);
+  --clink:   var(--cmb);
+  --chover:  var(--clb);
+  --ch1:     var(--cdp);
+  --ch2:     var(--cdb);
+  --ch3:     var(--cdt);
+  --ch4:     var(--cdg);
+  --ch5:     var(--cdy);	
+  --ch6:     var(--cmo);
+
+	--cbodybg: var(--cxt);
+
+	/* Gradients */
+	--gbodybg: hsla(from var(--cmp) h s l / 0.33), var(--cxt);
+	
+  --luid:  var(--cmp);
 	--ldev:  var(--cmb);
 	--letc:  var(--cmg);
 	--lart:  var(--cmt);
 	--llab:  var(--cmo);
 	--lblg:  var(--cmr);
-
-	--text-color: #333;
 
   /* Display Mode Selector Defaults */
   --brc-dms:    #666;
@@ -54,11 +71,12 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
+	background-color: var(--cbodybg);
+	background: linear-gradient(var(--gbodybg)) no-repeat;
+	/* background-size: 100% 600px; */
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--text-color));
+	color: var(--ctext);
 	/* font-size: 20px; */
 	/* line-height: 1.7; */
 }
@@ -77,38 +95,31 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
 	line-height: 1.2;
 }
 
-h1 { font-size: 3.052em; }
-h2 { font-size: 2.441em; }
-h3 { font-size: 1.953em; }
-h4 { font-size: 1.563em; }
-h5 { font-size: 1.250em; }
+h1 { color: var(--ch1); font-size: 3.052em; }
+h2 { color: var(--ch2); font-size: 2.441em; }
+h3 { color: var(--ch3); font-size: 1.953em; }
+h4 { color: var(--ch4); font-size: 1.563em; }
+h5 { color: var(--ch5); font-size: 1.250em; }
+h6 { color: var(--ch6); font-size: 1.000em; }
 
 strong,
-b { font-weight: 700; }
+b { color: var(--cbold); font-weight: 700; }
 
-a       { color: var(--accent); }
-a:hover { color: var(--accent); }
+a       { color: var(--clink); text-decoration: none; font-weight: 700; }
+a:hover { color: var(--chover); }
 
 p {	margin-bottom: 1em; }
 
 .prose p { margin-bottom: 2em; }
 
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
+textarea { width: 100%; font-size: 16px; }
 
-input {
-	font-size: 16px;
-}
+input { font-size: 16px; }
 
-table {
-	width: 100%;
-}
+table {	width: 100%; }
 
 img {
 	max-width: 100%;
@@ -118,7 +129,7 @@ img {
 
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
+	background-color: var(--cma);
 	border-radius: 2px;
 }
 
@@ -175,7 +186,7 @@ hr {
 #letc:hover { color:#fff; background-color: var(--letc); }
 #lblg:hover { color:#fff; background-color: var(--lblg); }
 
-/* Color Mode Selector */
+/******************************************************* Color Mode Selector */
 .selector {
   z-index: 5;
 	display: flex;
@@ -189,7 +200,7 @@ hr {
   overflow: hidden;
   background: var(--bgg-dms);
 
-  code  { white-space: nowrap; font-family: 'MenuFont', 'Courier New', Courier, monospace; }
+  code  { white-space: nowrap; font-family: monospace; }
 
   label {
     display: inline-flex;
@@ -238,15 +249,15 @@ hr {
 			background-color: unset;
 		}
 
-		&.w code { color: #FFF; }
-		&.y code { color: var(--cly); }
+		&.w code { color: var(--clw); }
+		&.y code { color: var(--cxo); }
 		&.o code { color: var(--clo); }
-		&.r code { color: var(--cxr); }
+		&.r code { color: var(--clr); }
 		&.d code { color: var(--clt); }
 		&.g code { color: var(--clg); }
 		&.b code { color: var(--cxb); }
 		&.p code { color: var(--cxp); }
-		&.k code { color: #AAA; }
+		&.k code { color: var(--cla); }
 
   } /* /label */
 
@@ -269,6 +280,132 @@ hr {
   } /* /input */
 
 } /* /selector */
+
+/**************************************************************** Light Mode */
+body:has(input[value="light"]:checked), body.light { /* Black on White (bnw) */
+	--ctext:   var(--clk);
+	--cbold:   var(--cdk);
+  --ch1:     var(--cdk);
+  --ch2:     var(--cmk);
+  --ch3:     var(--clk);
+  --ch4:     var(--cxk);
+  --ch5:     var(--cda);
+  --ch6:     var(--cma);
+
+	--cbodybg: var(--clw);
+	--gbodybg: var(--cxw), var(--cmw);
+} /* /light */
+
+/*************************************************************** Bright Mode */
+body:has(input[value="bright"]:checked), body.bright { /* Black on Yellow */
+	--ctext:   var(--cmk);
+	--cbold:   var(--cby);
+  --ch1:     var(--clk);
+  --ch2:     var(--cby);
+  --ch3:     var(--cma);
+  --ch4:     var(--cdy);
+  --ch5:     var(--cxa);
+  --ch6:     var(--cdy);
+
+	--cbodybg: var(--cxy);
+	--gbodybg: var(--cxy), var(--cmy);
+} /* /bright */
+
+/*************************************************************** Excite Mode */
+body:has(input[value="excite"]:checked), body.excite { /* Black on Orange */
+	--ctext:   var(--cmk);
+	--cbold:   var(--cbo);
+  --ch1:     var(--clk);
+  --ch2:     var(--cbo);
+  --ch3:     var(--cba);
+  --ch4:     var(--cdo);
+  --ch5:     var(--cma);
+  --ch6:     var(--cdo);
+
+	--cbodybg: var(--cxo);
+	--gbodybg: var(--cxo), var(--cmo);
+} /* /excite */
+
+/**************************************************************** Fight Mode */
+body:has(input[value="fight"]:checked), body.fight { /* Black on Red */
+	--ctext:   var(--cmk);
+	--cbold:   var(--cbr);
+  --ch1:     var(--clk);
+  --ch2:     var(--cbr);
+  --ch3:     var(--cba);
+  --ch4:     var(--cdr);
+  --ch5:     var(--cma);
+  --ch6:     var(--cdr);
+
+	--cbodybg: var(--cxr);
+	--gbodybg: var(--cxr), var(--cmr);
+} /* /fight */
+
+/************************************************************** Insight Mode */
+body:has(input[value="insight"]:checked), body.insight { /* Black on Green */
+	--ctext:   var(--cmk);
+	--cbold:   var(--cbg);
+  --ch1:     var(--clk);
+  --ch2:     var(--cbg);
+  --ch3:     var(--cba);
+  --ch4:     var(--cdg);
+  --ch5:     var(--cma);
+  --ch6:     var(--cdg);
+
+	--cbodybg: var(--cxg);
+	--gbodybg: var(--cxg), var(--cdg);
+} /* /insignt */
+
+/*************************************************************** Flight Mode */
+body:has(input[value="flight"]:checked), body.flight { /* Black on Blue */
+	--ctext:   var(--cmk);
+	--cbold:   var(--cbb);
+  --clink:   var(--cdb);
+  --chover:  var(--cmb);
+  --ch1:     var(--clk);
+  --ch2:     var(--cbb);
+  --ch3:     var(--cba);
+  --ch4:     var(--cdb);
+  --ch5:     var(--cma);
+  --ch6:     var(--cdb);
+
+	--cbodybg: var(--cxb);
+	--gbodybg: var(--cxb), var(--cmb);
+} /* /flight */
+
+/************************************************************** Depeche Mode */
+body:has(input[value="depeche"]:checked), body.depeche { /* White on Purple */
+	--ctext:   var(--cmw);
+	--cbold:   var(--cxp);
+  --clink:   var(--clp);
+  --chover:  var(--cxp);
+  --ch1:     var(--cxw);
+  --ch2:     var(--clp);
+  --ch3:     var(--cbw);
+  --ch4:     var(--cmp);
+  --ch5:     var(--cma);
+  --ch6:     var(--cmp);
+
+	--cbodybg: var(--cdp);
+	--gbodybg: var(--cdp), var(--cbp);
+} /* /depeche */
+
+/**************************************************************** Night Mode */
+body:has(input[value="night"]:checked), body.night { /* White on Black (wnb) */
+	--ctext:   var(--cmw);
+	--cbold:   var(--cxw);
+  --clink:   var(--clb);
+  --chover:  var(--cxb);
+  --ch1:     var(--cxw);
+  --ch2:     var(--clw);
+  --ch3:     var(--cmw);
+  --ch4:     var(--cdw);
+  --ch5:     var(--cxa);
+  --ch6:     var(--cla);
+	
+	--cbodybg: var(--clk);
+	--gbodybg: var(--cmk), var(--cxk);
+} /* /night */
 
 /* Media Queries *************************************************************/
 

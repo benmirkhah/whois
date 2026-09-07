@@ -3,7 +3,6 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Ben Mirkhah
 	<div class="social-links">
 		<a href="https://twitter.com/drupalati" target="_blank">
 			<span class="sr-only">Twitter</span>
@@ -24,19 +23,21 @@ const today = new Date();
 			>
 		</a>
 	</div>
+	&copy; {today.getFullYear()} Ben Mirkhah
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		padding: 1em;
+		--gfooter: #FFF9, hsl(from var(--cmw) h s l / 0.85);
+		background: linear-gradient(var(--gfooter)) no-repeat;
+		color: var(--cma);
 		text-align: center;
+		margin-bottom: 40px;
 	}
 	.social-links {
 		display: flex;
 		justify-content: center;
 		gap: 1em;
-		margin-top: 1em;
 	}
 	.social-links a {
 		text-decoration: none;

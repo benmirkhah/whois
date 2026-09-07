@@ -48,7 +48,7 @@ const project = defineCollection({
 			//tags: z.array(z.string()),
 			ratio: z.string(),
 			sprite: z.optional(image()),
-			caption: z.json().optional(),
+			caption: z.json(),
 		}),
 });
 

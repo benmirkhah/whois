@@ -1,0 +1,32 @@
+---
+//import { slide } from 'astro:transitions';
+import PageLayout from './Page.astro';
+//import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'project'>['data'];
+
+const { title, year, ratio, sprite, caption } = Astro.props;
+
+const slides = Object.entries(caption ?? {});
+
+const total = slides.length;
+
+for (const [key, value] of slides) {
+  console.log(`${key}: ${value}`);
+}
+
+
+---
+<PageLayout>
+	<h1>{title}</h1>
+  <h5>{year}</h5>
+  <section>
+    <!--{sprite && <Image width={400} height={300} src={sprite} class={ratio} alt="" />}-->
+    {sprite && <img width={400} height={300} src=`${sprite}` class={ratio} alt=`slide N of ${total}` />}
+
+
+
+    <slot />
+	</section>
+</PageLayout>
