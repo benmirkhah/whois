@@ -11,24 +11,40 @@
 	--cxp:#B6F; --clp:#94F; --cmp:#80E; --cdp:#60C; --cbp:#306;
 	--cxm:#F9F; --clm:#E6D; --cmm:#D0A; --cdm:#C0C; --cbm:#909;
 
-	--ccx:#FFF; --ccl:#FC9; --ccm:#C0C; --ccd:#609; --ccb:#036; /* Current Colors */
-
+  /* Default Right Mode */
 	--ctext:   var(--clk);
 	--cbold:   var(--cdk);
   --clink:   var(--cmb);
   --chover:  var(--clb);
-  --ch1:     var(--cdp);
-  --ch2:     var(--cdb);
-  --ch3:     var(--cdt);
-  --ch4:     var(--cdg);
-  --ch5:     var(--cdy);	
-  --ch6:     var(--cmo);
+  --ch1:     var(--cbk);
+  --ch2:     var(--cbp);
+  --ch3:     var(--cdp);
+  --ch4:     var(--cmp);
+  --ch5:     var(--clp);	
+  --ch6:     var(--cxp);
 
 	--cbodybg: var(--cxt);
-
-	/* Gradients */
-	--gbodybg: hsla(from var(--cmp) h s l / 0.33), var(--cxt);
+	--gbodybg: hsla(from var(--cmp) h s l / 0.5), var(--cxt);
 	
+	/* Font Sizes */
+	--fsh1: 3.052em; 
+	--fsh2: 2.441em;
+	--fsh3: 1.953em;
+	--fsh4: 1.563em;
+	--fsh5: 1.250em;
+	--fsh6: 1.000em;
+	--fsp:  1.000em;
+
+	/* Line Heights */
+	--lhh1: 1em;
+	--lhh2: 1em;
+	--lhh3: 1em;
+	--lhh4: 1em;
+	--lhh5: 1em;
+	--lhh6: 1em;
+	--lhp:  1em;
+
+	/* Nav Bar Links */
   --luid:  var(--cmp);
 	--ldev:  var(--cmb);
 	--letc:  var(--cmg);
@@ -45,6 +61,7 @@
   --dms-atext:  #FFF;
   --dms-shade:  #000;
 
+	/* Astro */
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
@@ -61,24 +78,22 @@
 
 html,
 body {
-	margin: 0;
 	width: 100%;
 	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-	font-family: var(--font-atkinson);
-	margin: 0;
-	padding: 0;
+	color: var(--ctext);
+	word-wrap: break-word;
+	font-size: var(--fsp);
 	text-align: left;
+	line-height: var(--lhp);
+	font-family: var(--font-atkinson);
+	overflow-wrap: break-word;
 	background-color: var(--cbodybg);
 	background: linear-gradient(var(--gbodybg)) no-repeat;
-	/* background-size: 100% 600px; */
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: var(--ctext);
-	/* font-size: 20px; */
-	/* line-height: 1.7; */
 }
 
 main {
@@ -94,16 +109,18 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
-	line-height: 1.2;
+	padding: 15px 0;
+	margin: 0;
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
 }
 
-h1 { color: var(--ch1); font-size: 3.052em; }
-h2 { color: var(--ch2); font-size: 2.441em; }
-h3 { color: var(--ch3); font-size: 1.953em; }
-h4 { color: var(--ch4); font-size: 1.563em; }
-h5 { color: var(--ch5); font-size: 1.250em; }
-h6 { color: var(--ch6); font-size: 1.000em; }
+h1 { color: var(--ch1); font-size: var(--fsh1); line-height: var(--lhh1); }
+h2 { color: var(--ch2); font-size: var(--fsh2); line-height: var(--lhh2); }
+h3 { color: var(--ch3); font-size: var(--fsh3); line-height: var(--lhh3); }
+h4 { color: var(--ch4); font-size: var(--fsh4); line-height: var(--lhh4); }
+h5 { color: var(--ch5); font-size: var(--fsh5); line-height: var(--lhh5); }
+h6 { color: var(--ch6); font-size: var(--fsh6); line-height: var(--lhh6); }
 
 strong,
 b { color: var(--cbold); font-weight: 700; }
