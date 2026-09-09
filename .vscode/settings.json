@@ -11,7 +11,16 @@
     "activityBarTop.foreground": "#e7e7e7",
     "activityBarTop.inactiveForeground": "#e7e7e799",
     "sash.hoverBorder": "#2f5d8c",
-    "tab.activeBorder": "#2f5d8c"
+    "tab.activeBorder": "#2f5d8c",
+    "activityBar.activeBorder": "#e7e7e7",
+    "activityBarTop.activeBorder": "#e7e7e7"
   },
-  "peacock.color": "#224466"
+  "peacock.color": "#224466",
+  "cSpell.words": [
+    "cbodybg",
+    "cbold",
+    "chover",
+    "ctext",
+    "gbodybg"
+  ]
 }

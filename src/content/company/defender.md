@@ -6,5 +6,5 @@ url: 'https://defender.org'
 est: 1969
 tags: 'NonProfit, Law, Association, Seattle'
 ---
-
+Association of public defenders in Seattle area. 
 https://wearepda.org

@@ -20,5 +20,5 @@ Prouna is a luxury brand of jewel encrusted chinaware.
 
 Their original site was a limited marketing catalog, and they wanted an online store with their entire product catalog.
 
-The redisign was to showcase the luxury motifs of the brand by including high resultion retouched photos of each of their products.
+The redesign was to showcase the luxury motifs of the brand by including high resultion retouched photos of each of their products.
 

@@ -6,3 +6,4 @@ url: 'https://antarcticacapital.com'
 est: 2013
 tags: 'Financial, Investment, Real Estate'
 ---
+Antarctica capital is a real estate investment firm.

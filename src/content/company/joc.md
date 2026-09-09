@@ -6,3 +6,4 @@ url: 'https://joc.com'
 est: 1827
 tags: 'Media, Publication'
 ---
+Journal of Commerce is a publication dedicated to  international trade.

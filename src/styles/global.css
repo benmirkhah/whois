@@ -27,13 +27,13 @@
 	--gbodybg: hsla(from var(--cmp) h s l / 0.5), var(--cxt);
 	
 	/* Font Sizes */
-	--fsh1: 3.052em; 
-	--fsh2: 2.441em;
-	--fsh3: 1.953em;
-	--fsh4: 1.563em;
-	--fsh5: 1.250em;
-	--fsh6: 1.000em;
-	--fsp:  1.000em;
+	--fsh1: 40px; 
+	--fsh2: 35px;
+	--fsh3: 30px;
+	--fsh4: 25px;
+	--fsh5: 20px;
+	--fsh6: 16px;
+	--fsp:  16px;
 
 	/* Line Heights */
 	--lhh1: 1em;
@@ -52,11 +52,11 @@
 	--llab:  var(--cmo);
 	--lblg:  var(--cmr);
 
-  /* Display Mode Selector Defaults */
-  --brc-dms:    #666;
-  --bgg-dms:    linear-gradient(#555, #666);
-  --bgg-dmsa:   linear-gradient(#555, #444);
-  --bgg-dmsah:  linear-gradient(#EEE, #CCC);
+  /* Mode Selector Defaults */
+  --cmsbr:    #666;
+  --gmsbg:    linear-gradient(#555, #666);
+  --gmsbga:   linear-gradient(#555, #444);
+  --gmsbgah:  linear-gradient(#EEE, #CCC);
   --dms-text:   var(--text-color);
   --dms-atext:  #FFF;
   --dms-shade:  #000;
@@ -215,7 +215,7 @@ hr {
   bottom: 0;
   vertical-align: bottom;
   overflow: hidden;
-  background: var(--bgg-dms);
+  background: var(--gmsbg);
 
   code  { white-space: nowrap; font-family: monospace; }
 
@@ -224,21 +224,21 @@ hr {
     justify-content: center;  
     width: clamp(20px, calc( 50% - 1px), 50px); /* clamp(15%, 30%, 150px); */
     height: 35px;
-    background: var(--bgg-dms);
+    background: var(--gmsbg);
     color: var(--mint);
     font-size: 16px;
     font-weight: bold;
     line-height: 16px;
     text-align: center;
     padding: 10px 0 0 0;
-    border:   1px solid var(--brc-dms);
+    border:   1px solid var(--cmsbr);
     user-select: none;
     transition: all 0.3s ease-in-out;
     box-shadow: inset 0 1px 3px rgba(  0,   0,   0, 0.35), 
                         0   4px rgba(255, 255, 255, 0.35);
     --dms-shade: #FF6600CC;
   
-    &:hover         { cursor: pointer; background: var(--bgg-dmsah);    }
+    &:hover         { cursor: pointer; background: var(--gmsbgah);    }
     &:first-of-type { border-right: none; color: var(--mwht); --dms-shade: #000000CC; }
     &:last-of-type  { border-left:  none; color: var(--kblk); --dms-shade: #CCCCCC66; }
 
@@ -288,7 +288,7 @@ hr {
 
     &:checked + label {
       cursor:  default;
-      background: var(--bgg-dmsa);
+      background: var(--gmsbga);
       width: calc(100% - 100px);
 
       i    { text-shadow: 0 0 8px var(--dms-shade); filter: brightness(0.85) contrast(1.5); }

@@ -21,6 +21,6 @@ caption: {
 
 Jadugaran was a multilingual site for an international music publishing collective.
 
-The site showcased music and lyrics of a number of artists and collaberators in English, 
+The site showcased music and lyrics of a number of artists and collaborators in English, 
 German and Persian. The site also acted as a fan base allowing various interactions between 
-users and their favorite artist through coments and participation in ratings.
+users and their favorite artist through comments and participation in ratings.
