@@ -12,6 +12,7 @@
 	--cxm:#F9F; --clm:#E6D; --cmm:#D0A; --cdm:#C0C; --cbm:#909;
 
   /* Default Right Mode */
+	--theme:   right;
 	--cmain:   #047;
 	--imain:   #9CF;
 	--calt:    #605;
@@ -301,6 +302,7 @@ hr {
 
 /**************************************************************** Light Mode */
 body:has(input[value="light"]:checked), body.light { /* Black on White (bnw) */
+	--theme:   light;
 	--ctext:   var(--clk);
 	--cbold:   var(--cdk);
 	--cinv:    var(--cdw);
@@ -317,6 +319,7 @@ body:has(input[value="light"]:checked), body.light { /* Black on White (bnw) */
 
 /*************************************************************** Bright Mode */
 body:has(input[value="bright"]:checked), body.bright { /* Black on Yellow */
+	--theme:   bright;
 	--ctext:   var(--cmk);
 	--cbold:   var(--cby);
   --ch1:     var(--clk);
@@ -332,6 +335,7 @@ body:has(input[value="bright"]:checked), body.bright { /* Black on Yellow */
 
 /*************************************************************** Excite Mode */
 body:has(input[value="excite"]:checked), body.excite { /* Black on Orange */
+	--theme:   excite;
 	--ctext:   var(--cmk);
 	--cbold:   var(--cbo);
   --ch1:     var(--clk);
@@ -347,6 +351,7 @@ body:has(input[value="excite"]:checked), body.excite { /* Black on Orange */
 
 /**************************************************************** Fight Mode */
 body:has(input[value="fight"]:checked), body.fight { /* Black on Red */
+	--theme:   fight;
 	--ctext:   var(--cmk);
 	--cbold:   var(--cbr);
   --ch1:     var(--clk);
