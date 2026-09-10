@@ -6,9 +6,10 @@ import HeaderLink from './HeaderLink.astro';
 	<nav>
 		<a class="home" href="/">BEN WHO?</a>
 		<div class="navlinks">
-			<HeaderLink href="/uix" id="luid">Designer</HeaderLink>
-			<HeaderLink href="/dev" id="ldev">Developer</HeaderLink>
-			<HeaderLink href="/etc" id="letc">etc.</HeaderLink>
+			<HeaderLink href="/uix" id="uid">Designer</HeaderLink>
+			<HeaderLink href="/dev" id="dev">Developer</HeaderLink>
+			<HeaderLink href="/dir" id="dir">Director</HeaderLink>
+			<HeaderLink href="/etc" id="etc">etc.</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -16,7 +17,7 @@ import HeaderLink from './HeaderLink.astro';
 	header {
 		margin: 0;
 		padding: 0;
-		background: #FFF9;
+		background: #FFF6;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
 
@@ -28,18 +29,17 @@ import HeaderLink from './HeaderLink.astro';
 
 	nav a {
 		padding: 0 10px;
-		font-size: 16px;
-		height: 40px;
-		line-height: 40px;
+		font-size: 15px;
+		height: 30px;
+		line-height: 30px;
 	}
 
 	nav a.active {
-		background-color: black;
-		color: white;
+		background-color: #FFF6;
+		color: #000;
 	}
 
 	nav a.home {
-		/* display: block; */
 		font-size: 20px;
 		color: var(--ch2);
 	}
