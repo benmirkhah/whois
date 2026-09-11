@@ -1,5 +1,3 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
+//Global data go here
 export const SITE_TITLE = 'BEN WHO?';
-export const SITE_DESCRIPTION = 'Ben Mirkhah - Web Performance Extraordinaire';
+export const SITE_DESCRIPTION = 'Ben Mirkhah builds ultra high performance digital experiences.';
